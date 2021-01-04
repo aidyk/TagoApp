@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="28" android:compileSdkVersionCodename="9" package="com.liber8tech.tago" platformBuildVersionCode="20" platformBuildVersionName="2.1.1">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+    <uses-feature android:name="android.hardware.location.network"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <application android:allowBackup="true" android:appComponentFactory="android.support.v4.app.CoreComponentFactory" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:name="com.liber8tech.tago.android.TagoApplication" android:supportsRtl="true" android:theme="@style/AppTheme">
+        <activity android:name="com.liber8tech.tago.android.activity.IntroActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.liber8tech.tago.android.activity.MainActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.liber8tech.tago.android.activity.SettingsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.liber8tech.tago.android.activity.AboutActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.liber8tech.tago.android.activity.TagoDetailsActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.liber8tech.tago.android.activity.SelectTagoActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.liber8tech.tago.android.activity.SyncActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.liber8tech.tago.android.activity.AddTagoActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.liber8tech.tago.android.activity.ResetActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.liber8tech.tago.android.activity.ResetChooseDeviceActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.liber8tech.tago.android.activity.ResetSyncActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.liber8tech.tago.android.activity.SignInActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible"/>
+        <activity android:name="com.liber8tech.tago.android.activity.SignUpActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible"/>
+        <activity android:name="com.liber8tech.tago.android.activity.ChangePasswordActivity" android:screenOrientation="portrait" android:windowSoftInputMode="stateVisible"/>
+        <activity android:name="com.liber8tech.tago.android.activity.CameraActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.liber8tech.tago.android.activity.ImageEditorActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.liber8tech.tago.android.activity.ForgetPasswordActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.liber8tech.tago.android.activity.StoreActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.liber8tech.tago.android.activity.PackActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.liber8tech.tago.android.activity.KioskActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.liber8tech.tago.android.activity.AttachmentActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/pdf"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/pdf"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/pdf"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:host="*" android:pathPattern=".*\\.pdf" android:scheme="file"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="*" android:pathPattern=".*\\.pdf" android:scheme="http"/>
+                <data android:host="*" android:pathPattern=".*\\.pdf" android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.liber8tech.tago.android.activity.ProfileActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.liber8tech.tago.android.activity.ContactUsActivity" android:screenOrientation="portrait"/>
+        <meta-data android:name="io.fabric.ApiKey" android:value="353368f7e8975148dc2e0ec3ad270c24fa052005"/>
+        <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:label="@string/app_name" android:name="com.facebook.FacebookActivity" android:theme="@style/com_facebook_activity_theme"/>
+        <activity android:exported="true" android:name="com.facebook.CustomTabActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:scheme="@string/fb_login_protocol_scheme"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.facebook.CustomTabMainActivity"/>
+        <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService"/>
+        <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <provider android:authorities="com.liber8tech.tago.FacebookInitProvider" android:exported="false" android:name="com.facebook.internal.FacebookInitProvider"/>
+        <receiver android:exported="false" android:name="com.facebook.CurrentAccessTokenExpirationBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <provider android:authorities="com.liber8tech.tago.com.squareup.picasso" android:exported="false" android:name="com.squareup.picasso.PicassoProvider"/>
+        <provider android:authorities="com.liber8tech.tago.crashlyticsinitprovider" android:exported="false" android:initOrder="90" android:name="com.crashlytics.android.CrashlyticsInitProvider"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:name="com.android.billingclient.api.ProxyBillingActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+    </application>
+</manifest>

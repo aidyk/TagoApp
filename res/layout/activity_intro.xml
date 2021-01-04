@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView android:id="@id/exoPlayerView" android:layout_width="fill_parent" android:layout_height="fill_parent" app:resize_mode="fixed_width" />
+    <View android:background="#55000000" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/layoutMain" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="@dimen/activity_horizontal_margin" android:layout_marginTop="48.0dip" android:layout_marginRight="@dimen/activity_horizontal_margin" android:layout_marginBottom="64.0dip">
+        <ImageView android:layout_width="63.0dip" android:layout_height="45.0dip" android:src="@drawable/ic_launcher" />
+        <android.support.v4.widget.Space android:layout_width="0.0dip" android:layout_height="0.0dip" android:layout_weight="1.0" />
+        <TextView android:textSize="20.0sp" android:textColor="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/intro_title" android:textAllCaps="true" />
+        <TextView android:textSize="12.0sp" android:textColor="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/intro_title_sub" />
+        <com.liber8tech.tago.android.view.TagoButton android:id="@id/btnSignIn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="36.0dip" android:layout_marginBottom="8.0dip" android:text="@string/auth_sign_in" style="?android:borderlessButtonStyle" />
+        <com.liber8tech.tago.android.view.TagoButton android:id="@id/btnSignUp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/auth_sign_up" style="?android:borderlessButtonStyle" />
+        <com.liber8tech.tago.android.view.TagoButton android:id="@id/facebook_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/auth_facebook" style="?android:borderlessButtonStyle" />
+    </LinearLayout>
+</FrameLayout>

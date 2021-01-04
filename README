@@ -1,0 +1,14 @@
+Disclaimer: I do not own this code, which is reverse-engineered from the
+Tago App 2.1.1 originally delveoped by liber8tech. 
+
+Here is a short story,
+Back then Sep, 2019, the dedicated image sync server for tago arc has started to be unstable, 
+and around May. 2020, it was completely down. Since the tago arc is nothing without the Tago App, 
+I reverse-engineered it and managed to make it work again so as to keep the Tago arc alive.
+The only changes from the original code are
+1. bypassing login
+2. bypassing image sync
+all of the aboves require a communication with the sync server which is currently down.
+
+If you have any question or inquiry, feel free to send me (a.i@acm.org) an email.
+Jan 4. 2021.
