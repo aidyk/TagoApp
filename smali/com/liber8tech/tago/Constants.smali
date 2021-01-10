@@ -24,6 +24,7 @@
         "autoUpload",
         "collectionType",
         "created",
+        "createdFolderPath",
         "currentPack",
         "isLogin",
         "pattern",
@@ -70,6 +71,11 @@
 .end field
 
 .field public static final created:Ljava/lang/String; = "created"
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+.end field
+
+.field private static final createdFolderPath:Ljava/lang/String;
     .annotation build Lorg/jetbrains/annotations/NotNull;
     .end annotation
 .end field
@@ -123,6 +129,38 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
+    const-string v1, "created"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    sget-object v1, Ljava/io/File;->separator:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/liber8tech/tago/Constants;->createdFolderPath:Ljava/lang/String;
+
+    return-void
+.end metho
+
+.method static constructor <clinit>()V
+    .locals 2
+
+    .line 5
+    new-instance v0, Lcom/liber8tech/tago/Constants;
+
+    invoke-direct {v0}, Lcom/liber8tech/tago/Constants;-><init>()V
+
+    sput-object v0, Lcom/liber8tech/tago/Constants;->INSTANCE:Lcom/liber8tech/tago/Constants;
+
+    .line 8
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
     const-string v1, "purchased"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -151,6 +189,17 @@
 
 
 # virtual methods
+.method public final getCreatedFolderPath()Ljava/lang/String;
+    .locals 1
+    .annotation build Lorg/jetbrains/annotations/NotNull;
+    .end annotation
+
+    .line 8
+    sget-object v0, Lcom/liber8tech/tago/Constants;->createdFolderPath:Ljava/lang/String;
+
+    return-object v0
+.end method
+
 .method public final getPurchasedFolderPath()Ljava/lang/String;
     .locals 1
     .annotation build Lorg/jetbrains/annotations/NotNull;
