@@ -34,7 +34,9 @@ public final class ImageEditorService$uploadImage$1<T, R> implements Function<T,
             int i = ((int) this.$rightBottom.y) - ((int) this.$leftTop.y);
             bitmap2 = Bitmap.createBitmap(bitmap, (int) this.$leftTop.x, (int) this.$leftTop.y, ((int) this.$rightBottom.x) - ((int) this.$leftTop.x), i);
         }
-        File file = new File(this.this$0.context.getFilesDir(), "image.jpg");
+        // File file = new File(this.this$0.context.getFilesDir(), "image.jpg");
+        File file = new File(this.this$0.context.getFilesDir(), Constants.INSTANCE.getCreatedFolderPath() + "image.jpg");
+
         FileOutputStream fileOutputStream = new FileOutputStream(file);
         if (bitmap2 != null) {
             bitmap2.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream);
