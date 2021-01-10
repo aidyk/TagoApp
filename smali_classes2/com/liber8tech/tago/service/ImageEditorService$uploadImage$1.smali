@@ -159,6 +159,7 @@
     :cond_0
     new-instance p1, Ljava/io/File;
 
+    # <this.this$0.context.getFiledsDir().
     iget-object v1, p0, Lcom/liber8tech/tago/service/ImageEditorService$uploadImage$1;->this$0:Lcom/liber8tech/tago/service/ImageEditorService;
 
     invoke-static {v1}, Lcom/liber8tech/tago/service/ImageEditorService;->access$getContext$p(Lcom/liber8tech/tago/service/ImageEditorService;)Landroid/content/Context;
@@ -168,8 +169,28 @@
     invoke-virtual {v1}, Landroid/content/Context;->getFilesDir()Ljava/io/File;
 
     move-result-object v1
+    # >
 
-    const-string v2, "image.jpg"
+    const-string v4, "image.jpg"
+    # <String concat
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    sget-object v3, Lcom/liber8tech/tago/Constants;->INSTANCE:Lcom/liber8tech/tago/Constants;
+
+    invoke-virtual {v3}, Lcom/liber8tech/tago/Constants;->getCreatedFolderPath()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+    # >
 
     invoke-direct {p1, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 

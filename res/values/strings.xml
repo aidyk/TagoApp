@@ -143,7 +143,7 @@
     <string name="devices">Devices</string>
     <string name="disable">Disable</string>
     <string name="email">support@liber8tech.com</string>
-    <string name="empty_collection">"I don't have a thing to wear"</string>
+    <string name="empty_collection">"The collection is empty."</string>
     <string name="empty_qr">No QR code in the document</string>
     <string name="enable">Enable</string>
     <string name="exo_controls_fastforward_description">Fast forward</string>
