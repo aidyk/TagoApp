@@ -66,6 +66,11 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    # Bypass login step.
+    iget-object p1, p0, Lcom/liber8tech/tago/android/activity/SignInActivity$signInClick$3;->this$0:Lcom/liber8tech/tago/android/activity/SignInActivity;
+    check-cast p1, Landroid/app/Activity;
+    invoke-static {p1}, Lcom/liber8tech/tago/util/AuthValidationKt;->loginSuccess(Landroid/app/Activity;)V
+
     return-void
 .end method
 

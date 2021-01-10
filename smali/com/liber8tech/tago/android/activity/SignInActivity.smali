@@ -323,14 +323,7 @@
 
     const-string v1, "textInputEmail"
 
-    invoke-static {v0, v1}, Lkotlin/jvm/internal/Intrinsics;->checkExpressionValueIsNotNull(Ljava/lang/Object;Ljava/lang/String;)V
-
-    invoke-static {v0}, Lcom/liber8tech/tago/util/AuthValidationKt;->isEmailValid(Lcom/liber8tech/tago/android/view/TextInputView;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
+    # Remove email pattern validation.
     .line 74
     sget v0, Lcom/liber8tech/tago/R$id;->progressBar:I
 
@@ -478,7 +471,6 @@
 
     invoke-virtual {v1, v0}, Lio/reactivex/disposables/CompositeDisposable;->add(Lio/reactivex/disposables/Disposable;)Z
 
-    :cond_1
     return-void
 .end method
 
