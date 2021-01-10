@@ -25,6 +25,7 @@
         "collectionType",
         "created",
         "createdFolderPath",
+        "getCreatedFolderPath",
         "currentPack",
         "isLogin",
         "pattern",
@@ -144,7 +145,7 @@
     sput-object v0, Lcom/liber8tech/tago/Constants;->createdFolderPath:Ljava/lang/String;
 
     return-void
-.end metho
+.end method
 
 .method static constructor <clinit>()V
     .locals 2

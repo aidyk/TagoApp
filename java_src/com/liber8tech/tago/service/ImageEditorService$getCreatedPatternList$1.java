@@ -30,6 +30,7 @@ public final class ImageEditorService$getCreatedPatternList$1<T, R> implements F
         }
         File[] listFiles = file.listFiles();
         Intrinsics.checkExpressionValueIsNotNull(listFiles, "userDir.listFiles()");
+        // isn't it possible? if the user removes all the patterns in the directory.
         ArrayList arrayList = new ArrayList(listFiles.length);
         for (File file2 : listFiles) {
             StringBuilder sb = new StringBuilder();

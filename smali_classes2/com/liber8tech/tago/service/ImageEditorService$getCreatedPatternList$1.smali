@@ -127,15 +127,23 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/liber8tech/tago/service/ImageEditorService$getCreatedPatternList$1;->this$0:Lcom/liber8tech/tago/service/ImageEditorService;
+    # <
+    sget-object v1, Lcom/liber8tech/tago/Constants;->INSTANCE:Lcom/liber8tech/tago/Constants;
 
-    invoke-static {v1}, Lcom/liber8tech/tago/service/ImageEditorService;->access$getRuntimeConfig$p(Lcom/liber8tech/tago/service/ImageEditorService;)Lcom/liber8tech/tago/util/RuntimeConfig;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/liber8tech/tago/util/RuntimeConfig;->getUserId()Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/liber8tech/tago/Constants;->getCreatedFolderPath()Ljava/lang/String;
 
     move-result-object v1
+    # < original
+    # iget-object v1, p0, Lcom/liber8tech/tago/service/ImageEditorService$getCreatedPatternList$1;->this$0:Lcom/liber8tech/tago/service/ImageEditorService;
+
+    # invoke-static {v1}, Lcom/liber8tech/tago/service/ImageEditorService;->access$getRuntimeConfig$p(Lcom/liber8tech/tago/service/ImageEditorService;)Lcom/liber8tech/tago/util/RuntimeConfig;
+
+    # move-result-object v1
+
+    # invoke-virtual {v1}, Lcom/liber8tech/tago/util/RuntimeConfig;->getUserId()Ljava/lang/String;
+
+    # move-result-object v1
+    #>
 
     invoke-direct {p1, v0, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
