@@ -1,7 +1,9 @@
 Disclaimer: I do not own this code, which is reverse-engineered from the
 Tago App 2.1.1 originally delveoped by liber8tech. 
 
-I'm willing to quit this project at any time whenver the liber8tech developement team is back.
+There are code changes only for making tagoapp work standalone, e.g., bypassing login step/image sync, etc.
+
+I'm willing to quit this project at any time whenever the liber8tech developement team is back.
 
 If you have any question or inquiry, feel free to send me (a.i@acm.org) an email.
 Jan 4. 2021.
