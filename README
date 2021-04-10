@@ -1,12 +1,8 @@
 Disclaimer: I do not own this code, which is reverse-engineered from the
 Tago App 2.1.1 (once available on google play store) developed by liber8tech.
 
-There are code changes only for making tagoapp work standalone again, e.g., bypassing login step/image sync, etc.
-
-I'm willing to quit this project at any time whenever the liber8tech developement team is back.
-
-If you have any question or inquiry, feel free to send me (a.i@acm.org) an email.
+If you have any questions or inquiries, feel free to send me (a.i@acm.org) an email.
 
 Jan 4. 2021.
 
-p.s. alas, reverse-egineering of iOS app is almost impossible.
+p.s. alas, reverse-engineering of iOS app is technically almost impossible.
